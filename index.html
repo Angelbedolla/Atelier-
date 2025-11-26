@@ -215,89 +215,6 @@
       padding: 40px;
       margin-top: 40px;
     }
-
-    /* ----- Ajustar imágenes a pantalla completa en móvil ----- */
-.hero img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Texto centrado en hero */
-.hero-title {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
-}
-
-/* ----- Productos responsivos ----- */
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* Para que los productos se acomoden bien en móvil */
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ----- NAVBAR responsive ----- */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-}
-
-.nav-links {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-    gap: 25px;
-  }
-}
-
-/* ----- Buscador responsive ----- */
-.search-bar {
-  width: 100%;
-  max-width: 480px;
-  margin: 10px auto;
-  display: flex;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 10px 15px;
-  border-radius: 20px;
-  border: none;
-}
-
-/* Evita que se vea pegado a la izquierda en móvil */
-@media (max-width: 767px) {
-  .search-bar {
-    padding: 0 15px;
-  }
-}
-
-
     
   </style>
 </head>
@@ -598,5 +515,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
