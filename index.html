@@ -216,12 +216,30 @@
       margin-top: 40px;
     }
 
-      /* Hace que la barra se vea bien en celular */
+ /* Estilo general del buscador */
+#searchBar {
+  width: 300px;
+  max-width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Ajustes SOLO para celular */
 @media (max-width: 768px) {
+
+  .buscar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
   #searchBar {
-    width: 90% !important;
-    font-size: 18px !important;
-    padding: 12px !important;
+    width: 90%;       /* SE HACE GRANDE EN CELULAR */
+    height: 45px;     /* SE HACE MÁS ALTA */
+    font-size: 18px;  /* EL TEXTO SE VE */
   }
 }
 
@@ -525,6 +543,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
