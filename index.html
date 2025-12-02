@@ -224,6 +224,78 @@
     padding: 12px !important;
   }
 }
+ /* ============================= */
+/*      RESPONSIVE CELULAR       */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* Header más compacto */
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  /* Logo más pequeño */
+  .logo {
+    height: 70px;
+  }
+
+  /* Buscador 100% ancho */
+  .buscar-container input {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Navbar vertical */
+  .navbar {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  /* Carrito debajo del menú */
+  .cart-link {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  /* Hero más pequeño */
+  .hero {
+    height: 45vh;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+  }
+
+  /* Secciones reducen padding */
+  .titulo-seccion {
+    margin: 25px 20px 10px;
+    font-size: 26px;
+  }
+
+  .productos {
+    padding: 15px 20px 40px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .item img {
+    height: 180px;
+  }
+}
 
     
   </style>
@@ -525,6 +597,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
