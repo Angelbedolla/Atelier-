@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atelier - Moda Contemporánea</title>
   <style>
-    :root {
-      --gold: #cfa0098a;
-      --dark: #faf4f4;
-      --light: #030005;
-      --gray: #fcfafa;
-    }
+   /*Ahor ya esta cambiado final*/
+     :root {
+  --gold: #000000;        /* Ahora negro */
+  --dark: #111111;        /* Texto oscuro */
+  --light: #ffffff;       /* Fondo blanco */
+  --gray: #f5f5f5;
+}
 
+/* LOGO */
     .logo {
       height: 95px;
       width: auto;
@@ -21,7 +23,9 @@
     .logo:hover {
       transform: scale(1.05);
     }
-    .navbar {
+
+/* NAV BAR SUPERIOR */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,34 +59,34 @@
   height: 22px;
 }
 
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
+body {
+  background-color: var(--light); /* Fondo blanco */
+  color: var(--dark);
+}
 
-    body {
-      background-color: var(--light);
-      color: var(--dark);
-    }
+/* HEADER (BUSCADOR + NAV) */
+header {
+  width: 100%;
+  padding: 20px 40px;
+  background: black;         /* Antes blanco → ahora negro */
+  border-bottom: 1px solid #e4e4e4;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-    /* NAVBAR */
-    header {
-      width: 100%;
-      padding: 20px 40px;
-      background: var(--light);
-      border-bottom: 1px solid #e4e4e4;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
 
     /* BUSCADOR */
     .buscar-container {
@@ -96,125 +100,156 @@
       max-width: 400px;
       padding: 12px;
       font-size: 17px;
-      border: 2px solid var(--gold);
+      border: 2px solid #cfa009;
       border-radius: 8px;
       background: white;
     }
 
-    /* NAV LINKS */
-    nav {
-      display: flex;
-      gap: 20px;
-    }
 
-    nav a {
-      text-decoration: none;
-      color: var(--dark);
-      font-weight: 500;
-      transition: 0.3s;
-    }
+/* NAV LINKS SECUNDARIOS */
+nav {
+  display: flex;
+  gap: 20px;
+}
 
-    nav a:hover {
-      color: var(--gold);
-    }
+nav a {
+  text-decoration: none;
+  color: white;   /* Para que resalte en el fondo negro */
+  font-weight: 500;
+  transition: 0.3s;
+}
 
-    /* HERO */
-    .hero {
-      height: 80vh;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      position: relative;
-      text-align: center;
-    }
+nav a:hover {
+  color: #cfa009;
+}
 
-    .hero::before {
-      content:"";
-      position: absolute;
-      inset:0;
-      background: rgba(0,0,0,0.45);
-    }
+/* HERO */
+.hero {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
 
-    .hero h2 {
-      font-size: 60px;
-      z-index: 2;
-      font-weight: 700;
-    }
+.hero::before {
+  content:"";
+  position: absolute;
+  inset:0;
+  background: rgba(0,0,0,0.45);
+}
 
-    /* TITULOS */
-    .titulo-seccion {
-      font-size: 34px;
-      margin: 40px 60px 10px;
-      font-weight: 700;
-      color: var(--dark);
-      border-left: 5px solid var(--gold);
-      padding-left: 15px;
-    }
+.hero h2 {
+  font-size: 60px;
+  z-index: 2;
+  font-weight: 700;
+}
 
-    /* GRID PRODUCTOS */
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-      gap: 30px;
-      padding: 20px 60px 50px;
-    }
+/* TITULOS */
+.titulo-seccion {
+  font-size: 34px;
+  margin: 40px 60px 10px;
+  font-weight: 700;
+  color: var(--dark);
+  border-left: 5px solid var(--gold); /* negro */
+  padding-left: 15px;
+}
 
-    .item {
-      background: var(--light);
-      border-radius: 12px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: .3s;
-    }
+/* GRID PRODUCTOS */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+  padding: 20px 60px 50px;
+}
 
-    .item:hover {
-      transform: translateY(-8px);
-    }
+.item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: .3s;
+}
 
-    .item img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-    }
+.item:hover {
+  transform: translateY(-8px);
+}
 
-    .info {
-      padding: 15px;
-      text-align: center;
-    }
+.item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
 
-    .info h3 {
-      font-size: 20px;
-      margin-bottom: 6px;
-    }
+.info {
+  padding: 15px;
+  text-align: center;
+}
 
-    .info p {
-      color: var(--gold);
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
+.info h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: var(--dark);
+}
 
-    .info button {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      background: var(--gold);
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-    }
+.info p {
+  color: var(--gold); /* negro */
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
-    /* FOOTER */
-    footer {
-      background: var(--dark);
-      color: rgb(20, 1, 1);
-      text-align: center;
-      padding: 40px;
-      margin-top: 40px;
-    }
+.info button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: var(--gold); /* negro */
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  background: black; /* cambiado a negro */
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+/* SELECTOR DE TALLAS */
+.tallas {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.talla {
+  padding: 6px 10px;
+  border: 2px solid var(--gold); /* negro */
+  border-radius: 6px;
+  cursor: pointer;
+  color: black;
+  user-select: none;
+  transition: .2s;
+}
+
+.talla:hover {
+  background: var(--gold); /* negro */
+  color: white;
+}
+
+.talla.selected {
+  background: var(--gold); /* negro */
+  color: white;
+  font-weight: 700;
+}
  /* ============================= */
 /*      RESPONSIVE CELULAR       */
 /* ============================= */
@@ -588,6 +623,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
